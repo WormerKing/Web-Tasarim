@@ -1,0 +1,102 @@
+<div class='dashboard'>
+    <div class="dashboard-nav">
+        <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo">
+            <i class="fas fa-anchor"></i> <span>Rygrad Game</span></a></header>
+        <nav class="dashboard-nav-list">
+            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                    class="fas fa-users"></i> HESABIM </a>
+                <div class='dashboard-nav-dropdown-menu'><a href="#"
+                                                            class="dashboard-nav-dropdown-item">Hesap bilgileri</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Kazandığım Ödüller</a><a
+                        href="#"
+                        class="dashboard-nav-dropdown-item">Aldığım cezalar</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Engellemelerim</a><a
+                        href="https://www.adu.edu.tr/" class="dashboard-nav-dropdown-item">Hesabı sil</a></div>
+            </div>
+            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                    class="fas fa-users"></i> İNDİR </a>
+                <div class='dashboard-nav-dropdown-menu'><a href="#"
+                                                            class="dashboard-nav-dropdown-item">Windows</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Mac Os</a><a
+                        href="#"
+                        class="dashboard-nav-dropdown-item">Debian</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Fedora</a><a
+                        href="https://www.adu.edu.tr/" class="dashboard-nav-dropdown-item">Arch</a></div>
+            </div>
+            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                    class="fas fa-users"></i> DESTEK </a>
+                <div class='dashboard-nav-dropdown-menu'><a href="#"
+                                                            class="dashboard-nav-dropdown-item">Canlı Destek</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Mail gönderin</a>
+                </div>
+            </div>
+            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                    class="fas fa-users"></i> HABERLER </a>
+                <div class='dashboard-nav-dropdown-menu'><a href="#"
+                                                            class="dashboard-nav-dropdown-item">Banlananlar</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Güncellemeler</a><a
+                        href="#"
+                        class="dashboard-nav-dropdown-item">Turnuvalar</a>
+                </div>
+            </div>
+            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                    class="fas fa-users"></i> LİNKLER </a>
+                <div class='dashboard-nav-dropdown-menu'><a href="https://beratipekci.com.tr/"
+                                                            class="dashboard-nav-dropdown-item">Berat İpekçi</a><a
+                        href="https://omerkvak.com" class="dashboard-nav-dropdown-item">Ömer Kavak</a><a
+                        href="#"
+                        class="dashboard-nav-dropdown-item">Non-subscribed</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Banned</a><a
+                        href="https://www.adu.edu.tr/" class="dashboard-nav-dropdown-item">ADÜ</a></div>
+            </div>
+        </nav>
+    </div>
+    <div class='dashboard-app'>
+        <div class='dashboard-content'>
+            <div class='container'>
+                <div class='card'>
+                    <div class='card-header'>
+                        <h1>Rygrad Web sitesine hoşgeldiniz</h1>
+                    </div>
+                    <div class='card-body'>
+                        <p>Bu site proje amaçlı oluşturulmuştur</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="text-align: center;">Ana web sitesi</h4>
+                    <div class="resmi-web-site">
+                        <a href="https://rygrad.com"><iframe src="https://rygrad.com/" style="min-height: 500px;min-height: 500px;max-width: 1100px;max-height:500px;width:1200px;"></iframe></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="google-map">
+        <p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48152.69528633698!2d29.01271007818618!3d41.035243200158526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac826d524c9f1%3A0xc14f7612337b7f38!2zw5xza8O8ZGFyL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1519733547760" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </p>
+    </div>
+</div>
+
+
+<script>
+    const mobileScreen = window.matchMedia("(max-width: 990px )");
+    $(document).ready(function () {
+        $(".dashboard-nav-dropdown-toggle").click(function () {
+            $(this).closest(".dashboard-nav-dropdown")
+                .toggleClass("show")
+                .find(".dashboard-nav-dropdown")
+                .removeClass("show");
+            $(this).parent()
+                .siblings()
+                .removeClass("show");
+        });
+        $(".menu-toggle").click(function () {
+            if (mobileScreen.matches) {
+                $(".dashboard-nav").toggleClass("mobile-show");
+            } else {
+                $(".dashboard").toggleClass("dashboard-compact");
+            }
+        });
+    });
+</script>
